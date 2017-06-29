@@ -27,4 +27,8 @@ kubectl describe pod -l app=nginx2
 
 kubectl apply -f nginx-deployment-dev-update.yaml 
 
+- To see the service
 
+kubectl get service 
+
+ kubectl describe service nginx-service
