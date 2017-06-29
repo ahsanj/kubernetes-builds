@@ -19,3 +19,12 @@ verify
 
 wget -qO- http://localhost:8000
 
+- To list a pod with label
+
+kubectl describe pod -l app=nginx2
+
+- Apply update to only one deployment
+
+kubectl apply -f nginx-deployment-dev-update.yaml 
+
+
