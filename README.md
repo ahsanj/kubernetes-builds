@@ -32,3 +32,26 @@ kubectl apply -f nginx-deployment-dev-update.yaml
 kubectl get service 
 
  kubectl describe service nginx-service
+
+- Create replica from commandline
+
+kubectl run mysample --image=latest123/apache
+
+kubectl run replicas --image=latest123/apache --replicas=2 --labels=app=apache
+
+- Connect to a container
+
+kubectl exec my_cont -i -t -- /bin/bash
+
+- Checks logs
+
+kubectl logs replicas-3144326441-pmhtj
+
+kubectl logs --tail=10 replicas-3144326441-pmhtj 
+
+kubectl logs --since=24h replicas-3144326441-pmht
+
+kubectl logs -f replicas-3144326441-pmht
+
+
+
