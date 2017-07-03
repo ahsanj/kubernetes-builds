@@ -53,5 +53,15 @@ kubectl logs --since=24h replicas-3144326441-pmht
 
 kubectl logs -f replicas-3144326441-pmht
 
+- Autoscaling
 
+Kubectl autoscale deployment mypodname —min2 —max=6
+
+If you want to make changes to the above
+
+Kubectl scale —current-replicas=2 —replicas=4 deployment/mypodname
+
+Scale down (you can only scale down to the initial min)
+
+Kubectl scale —current-replicas=4 —replicas=2 deployment/mypodname
 
