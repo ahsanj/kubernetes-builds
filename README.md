@@ -43,6 +43,10 @@ kubectl run replicas --image=latest123/apache --replicas=2 --labels=app=apache
 
 kubectl exec my_cont -i -t -- /bin/bash
 
+- Run a command that displays the pod's container /var/www/html/index.html
+
+kubectl exec mypod -i -t -- cat /var/www/html/index.html
+
 - Checks logs
 
 kubectl logs replicas-3144326441-pmhtj
@@ -57,7 +61,7 @@ kubectl logs -f replicas-3144326441-pmht
 
 Kubectl autoscale deployment mypodname —min2 —max=6
 
-If you want to make changes to the above
+- If you want to make changes to the above
 
 Kubectl scale —current-replicas=2 —replicas=4 deployment/mypodname
 
